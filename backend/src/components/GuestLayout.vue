@@ -6,18 +6,24 @@
       <div>
         <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
         <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">{{ title }}</h2>
-        
       </div>
-        <slot></slot>
+       <form class="mt-8 space-y-6" @submit.prevent="emit('submit')" method="POST">
+          <slot></slot>
+            
+       </form>
     </div>
   </div>
 </template>
 
 
-<script>
- export default {
-    name : "GuestLayout"    
-  }
+<script setup>
+
+  const {title} = defineProps({
+        title: String
+    })
+    
+    const emit = defineEmits(['submit']);
+  
 </script>
 <style scoped></style>
 

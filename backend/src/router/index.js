@@ -4,6 +4,8 @@ import Login from "../views/auth/Login.vue";
 import Register from "../views/auth/Register.vue";
 import ForgottenPassword from "../views/auth/Forgot-Password.vue";
 import ResetPassword from "../views/auth/Reset-Password.vue";
+
+
 const routes = [
     {
         path: "/dashboard",

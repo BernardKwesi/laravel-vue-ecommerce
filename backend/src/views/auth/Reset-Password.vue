@@ -1,7 +1,7 @@
 <template>
   
-    <GuestLayout title="Set New Password" >
-      <form class="mt-8 space-y-6" action="#" method="POST">
+    <guest-layout title="Set New Password" >
+     
         <input type="hidden" name="remember" value="true" />
         <div class="-space-y-px rounded-md shadow-sm">
           <div>
@@ -30,12 +30,15 @@
             Submit
           </button>
         </div>
-      </form>
-    </GuestLayout>
+     
+    </guest-layout>
 </template>
 
 <script >
-import { LockClosedIcon } from '@heroicons/vue/20/solid'
-import GuestLayout from '../../components/GuestLayout.vue';
+  import { LockClosedIcon } from '@heroicons/vue/20/solid'
+  import GuestLayout from '../../components/GuestLayout.vue';
+  export default {
+    components: { GuestLayout }
+  }
 
 </script>
