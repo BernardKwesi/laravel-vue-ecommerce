@@ -4,9 +4,14 @@ import Login from "../views/auth/Login.vue";
 import Register from "../views/auth/Register.vue";
 import ForgottenPassword from "../views/auth/Forgot-Password.vue";
 import ResetPassword from "../views/auth/Reset-Password.vue";
-
+import NotFound from "../views/errors/NotFound.vue";
 
 const routes = [
+    {
+        path: "/",
+        name: "home",
+        component: Dashboard,
+    },
     {
         path: "/dashboard",
         name: "dashboard",
@@ -31,6 +36,11 @@ const routes = [
         path: "/reset-password/token",
         name: "reset-password",
         component: ResetPassword,
+    },
+    {
+        path: "/:pathMatch(.*)",
+        name: "notFound",
+        component: NotFound,
     },
 ];
 
