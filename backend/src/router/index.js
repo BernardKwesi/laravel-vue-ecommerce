@@ -5,6 +5,7 @@ import Register from "../views/auth/Register.vue";
 import ForgottenPassword from "../views/auth/Forgot-Password.vue";
 import ResetPassword from "../views/auth/Reset-Password.vue";
 import NotFound from "../views/errors/NotFound.vue";
+import Product from "../views/modules/Product.vue";
 
 const routes = [
     {
@@ -36,6 +37,11 @@ const routes = [
         path: "/reset-password/token",
         name: "reset-password",
         component: ResetPassword,
+    },
+    {
+        path: "/products",
+        name: "products",
+        component: Product,
     },
     {
         path: "/:pathMatch(.*)",
